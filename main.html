@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅</title>
+    <style>
+
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(50, 52, 65);
+        }
+
+        #chat_box{
+            position: fixed;
+            height: 90%;
+            width: 100%;
+            
+            bottom: 100px;
+            left: 0;
+            padding-left: 50px;
+            
+        }
+
+        #input{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 100px;
+            width: 100%;
+            box-shadow: 0px 0px 10px black;
+
+        }
+
+        #chatting{
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            border-radius: 10px 10px;
+            transform: translateX(-50%);
+            border: 1px solid black;
+            height: 30px;
+            width: 95%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #chatting_box{
+            position: absolute;
+            top: 50px;
+            height: 60px;
+            width: 90%;
+            
+        }
+
+        #profile{
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            border-radius: 30px 30px;
+            background-color: white;
+            /* border: 1px solid black; */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #name{
+            position: absolute;
+            left: 80px;
+            background-color: white;
+            font-size: 13px;
+            border-radius: 2px 2px;
+        }
+
+        #chat{
+            position: absolute;
+            top: 20px;
+            left: 80px;
+            /* height: 30px;
+            width: 10%; */
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 4px 4px;
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+
+    
+
+    <div id="chat_box">
+        <div id="chatting_box">
+            <div id="profile"></div>
+            <div id="name">이름</div>
+            <div id="chat">채팅창<br/>br test</div>
+        </div>
+        
+    </div>
+    
+    <div id="input">
+        <input type="text" id="chatting">
+    </div>
+
+
+    <script>
+
+        document.getElementById('chatting').onkeydown=function(e){
+            if(e.keyCode==13){
+                if(document.getElementById('chatting').value=!''){
+                    var ch_log=docuemnt.getElementById('chatting').value;
+                    document.getElementById('chatting').value="";
+                    var name='와샌즈아시는구나';
+                    
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>
